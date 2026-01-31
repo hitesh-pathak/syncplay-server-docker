@@ -104,8 +104,20 @@ syncplay-server
 
 Now that we've got our hands dirty with the manual part, we can containerize the process
 
-[dockerfile](./dockerfile)
-[entrypoint script](./entrypoint.sh)
+- [dockerfile](./dockerfile)
+- [entrypoint script](./entrypoint.sh)
+- [docker compose file](./docker-compose.yml)
+
+How to build and run the server
+
+```sh
+podman compose up --build -d
+```
+
+Observe the logs
+```sh
+podman logs syncplay-server -f
+```
 
 
 
