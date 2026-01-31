@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  SyncplayServer:
+    build:
+      context: .
+      args:
+        IMG_TAG: "3.13-alpine"
+        SYNCPLAY_VER: "1.7.4"
+    container_name: syncplay-server
+    ports:
+      - "8999:8999"
+    environment:
+      SYNCPLAY_PORT: 8999
+      SYNCPLAY_PASSWORD: ""
+      SYNCPLAY_SALT: "testing"
+      SYNCPLAY_MOTD: "Custom syncplay by me"
+
+    restart: unless-stopped
