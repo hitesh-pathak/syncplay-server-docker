@@ -7,7 +7,7 @@ services:
         SYNCPLAY_VER: "1.7.4"
     container_name: syncplay-server
     ports:
-      - "8999:8999"
+      - 8080:8999
     environment:
       SYNCPLAY_PORT: 8999
       SYNCPLAY_PASSWORD: ""
